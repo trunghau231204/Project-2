@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Total-Regular";
+  src: url(./results-summary-component-main/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+:root {
+  --bodyBackground: hsl(0, 0%, 100%);
+  --leftBackground: hsl(252, 100%, 67%);
+  --leftBackgroundTwo: hsl(241, 81%, 54%);
+  --roundBackground: hsla(256, 72%, 46%, 1);
+  --roundBackgroundTwo: hsla(241, 72%, 46%, 0);
+  --reactionColor: hsl(0, 100%, 67%);
+  --memoryColor: hsl(39, 100%, 56%);
+  --verbalColor: hsl(166, 100%, 37%);
+  --visualColor: hsl(234, 85%, 45%);
+  --reactionBackground: #fff6f5;
+  --memoryBackground: #fffbf2;
+  --verbalBackground: #f2fbfa;
+  --visualBackground: #f3f3fd;
+
+  --txt1: hsl(224, 30%, 27%);
+  --txt2: hsl(241, 100%, 89%);
+  --txt3: hsl(221, 100%, 96%);
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw;
+  width: 100%;
+  height: 100vh;
+  font-size: 18px;
+  font-family: "Total-Regular";
+}
+.main-page {
+  background-color: var(--bodyBackground);
+  display: flex;
+  align-items: center;
+  max-width: 740px;
+  width: 100%;
+  height: 510px;
+  box-shadow: 10px 10px 20px var(--txt2);
+  border-radius: 20px;
+}
+.left-info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+  background: linear-gradient(
+    to bottom,
+    var(--leftBackground) 10%,
+    var(--leftBackgroundTwo) 90%
+  );
+  border-radius: 20px;
+}
+.head-3 {
+  color: var(--txt2);
+}
+.round {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 210px;
+  height: 210px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    var(--roundBackground) 10%,
+    var(--roundBackgroundTwo) 90%
+  );
+}
+.number-big {
+  color: var(--txt3);
+  font-size: 60px;
+  font-weight: 600;
+}
+.number-small {
+  color: #8478ff;
+}
+.left-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.left-content h2 {
+  color: var(--txt3);
+  font-weight: 600;
+  font-size: 30px;
+}
+.left-content p {
+  color: var(--txt2);
+  font-size: 16px;
+}
+.right-info {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  padding: 40px;
+  width: 50%;
+}
+.right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.right-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 280px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+}
+.right-head {
+  font-size: 24px;
+  color: var(--txt1);
+}
+.right-es {
+  display: flex;
+  gap: 10px;
+}
+.bold {
+  font-weight: bold;
+}
+.reaction {
+  background-color: var(--reactionBackground);
+}
+.reaction h3 {
+  color: var(--reactionColor);
+}
+.memory {
+  background-color: var(--memoryBackground);
+}
+.memory h3 {
+  color: var(--memoryColor);
+}
+.verbal {
+  background-color: var(--verbalBackground);
+}
+.verbal h3 {
+  color: var(--verbalColor);
+}
+.visual {
+  background-color: var(--verbalBackground);
+}
+.visual h3 {
+  color: var(--visualColor);
+}
+.right-btn {
+  background-color: var(--txt1);
+  color: var(--txt3);
+  padding: 20px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+@media (max-width: 376px) {
+  .main-page {
+    display: flex;
+    flex-direction: column;
+    max-width: 370px;
+    width: 100%;
+    height: 810px;
+    border-radius: 20px;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+
+  /* .left-info {
+    width: 100%;
+    height: 50%;
+    padding-top: 30px;
+    padding-bottom: 42px;
+    gap: 25px;
+    border-radius: 0 0 20px 40px;
+  }
+  .round {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  }
+  .left-content h2 {
+    flex: 16px;
+    font-weight: 500;
+  }
+  .right-info {
+    max-width: 100%;
+    width: 100%;
+    gap: 20px;
+  }
+  .responsive {
+    width: 100%;
+  }
+  .right-head {
+    padding-left: 40px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .right-container {
+    padding-left: 40px;
+  }
+  .reaction h3 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .memory h3 {
+    color: var(--memoryColor);
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .verbal h3 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .visual h3 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .right-btn {
+    margin-left: 40px;
+    max-width: 300px;
+    width: 100%;
+  } */
+}
